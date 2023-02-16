@@ -11,6 +11,40 @@
     <!-- 자바스크립트 기본 - 형변환-->
     <script>
       // 1.문자형으로 변환
+      // - false는 문자열 "false"로, null은 문자열 "null"로 변환되는것과 같이 대부분 예측 가능한 방식으로 변환된다.
+      // - String(value) 함수를 호출해 전달받은 값을 문자열로 변환 할 수있다.
+      // let value = true;
+      // alert(typeof value); // boolean
+
+      // value = String(value); 변수 value엔 문자열 "true"가 저장된다.
+      // alert(typeof value); // string
+
+      // 2. 숫자형으로 변환
+      // - 수학과 관련된 함수와 표현식에서 자동으로 일어난다.
+      // - Number(value) 함수를 호출해 전달받은 값을 숫지형으로 변환 할 수 있다.
+      // - 숫자형 값을 문자기반 폼(알럿, 프롬프트 등)을 통해 입력받는 경우 명시적 형변환은 필수다.
+      // - 숫자 이외에 글자가 들어있는 문자열을 숫자로 반환하면 그결과는 NaN이 된다.
+
+      // alert("6" / "2"); // 3, 문자열이 숫자형으로 자동 변환된 후 연산이 수행됐다.
+
+      // let str = "123";
+      // alert(typeof str); // 문자열 string
+
+      // let num = Number(str); //문자열 "123"이 숫자 123으로 변환된다.
+      // alert(typeof num);
+
+      // let age = Number("임의의 문자열 123");
+      // alert(age); // NaN, 형변환에 실패한다.
+
+      // 3.불린형으로 변환
+      // - 논리연산을 수행할때 발생한다.
+      // - 숫자 0, 빈문자열, null, undefined, NaN과 같이 직관적으로 비어있다고 느껴지는 값은 false, 그외의 값은 true로 변환된다.
+      // - 예시는 아래와 같다.
+      // alert(Boolean(1)); // 숫자 1(true)
+      // alert(Boolean(0)); // 숫자 0(false)
+      // alert(Boolean("hello")); // 문자열(true)
+      // alert(Boolean("")); // 빈 문자열(false)
+      // ※ 문자열 "0"은 true이다.
     </script>
   </body>
 </html>
